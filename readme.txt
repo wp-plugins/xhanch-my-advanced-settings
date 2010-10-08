@@ -24,6 +24,8 @@ This plugin should be an essential plugin for your WordPress websites.
 
 [There actually more features of this plugin. To see complete features and information about Xhanch - My Advanced Settings, Click here](http://xhanch.com/wordpress-plugin-my-advanced-settings/ "Xhanch - My Advanced Settings")
 
+[Click here to see All free plugins from Xhanch Studio](http://wordpress.org/extend/plugins/profile/xhanch_studio "Click here to see All free plugins from Xhanch Studio")
+
 == Installation ==
 
 [Click here for more detailed information about Xhanch - My Advanced Settings and If you're having a problem with the plugin](http://xhanch.com/wordpress-plugin-my-advanced-settings/ "Xhanch - My Advanced Settings")
