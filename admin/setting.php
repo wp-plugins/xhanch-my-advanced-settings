@@ -9,9 +9,18 @@
 				
 		if($_POST['cmd_xms_update']){
 			$xms_conf = array(
-				'disable_wp_auto_p_post' => xms_form_post('chk_xms_disable_wp_auto_p_post'),
-				'disable_wp_auto_p_comment' => xms_form_post('chk_xms_disable_wp_auto_p_comment'),	
-				'disable_wp_texturize' => xms_form_post('chk_xms_disable_wp_texturize'),	
+				'disable_wp_auto_p' => array(
+					'post' => xms_form_post('chk_xms_disable_wp_auto_p_post'),
+					'comment' => xms_form_post('chk_xms_disable_wp_auto_p_comment'),
+				),
+				'disable_wp_texturize' => array(
+					'post' => xms_form_post('chk_xms_disable_wp_texturize_post'),
+					'comment' => xms_form_post('chk_xms_disable_wp_texturize_comment'),
+				),	
+				'disable_convert_chars' => array(
+					'post' => xms_form_post('chk_xms_disable_convert_chars_post'),
+					'comment' => xms_form_post('chk_xms_disable_convert_chars_comment'),
+				),
 				'disable_post_revision' => xms_form_post('chk_xms_disable_post_revision'),		
 				'enable_shortcode_on_text_widget' => xms_form_post('chk_xms_enable_shortcode_on_text_widget'),	
 				'show_credit' => xms_form_post('chk_xms_show_credit'),	
@@ -60,21 +69,55 @@
                 <br/>                             
                 <br/>
                 <table cellpadding="0" cellspacing="0">
+                
                     <tr>
-                        <td width="22px"><input type="checkbox" id="chk_xms_disable_wp_auto_p_post" name="chk_xms_disable_wp_auto_p_post" value="1" <?php echo ($xms_conf['disable_wp_auto_p_post']?'checked="checked"':''); ?>/></td>
-                        <td width="775px"><?php echo __('Disable auto p on post/page? <i>(This will stop WordPress to add paragraph automatically to your post/page contents)</i>', 'xms'); ?></td>
+                        <td colspan="2">
+							<?php echo __('Disable wp auto p <i>(This will stop WordPress to add paragraph (P html tag) automatically)</i>', 'xms'); ?>
+                            <table cellpadding="0" cellspacing="0" style="margin-bottom:5px">
+                            	<tr>
+                        			<td width="22px"><input type="checkbox" id="chk_xms_disable_wp_auto_p_post" name="chk_xms_disable_wp_auto_p_post" value="1" <?php echo ($xms_conf['disable_wp_auto_p']['post']?'checked="checked"':''); ?>/></td>
+                                    <td width="200px"><?php echo __('On post/page content', 'xms'); ?></td>
+                                    <td width="10px"></td>
+                        			<td width="22px"><input type="checkbox" id="chk_xms_disable_wp_auto_p_comment" name="chk_xms_disable_wp_auto_p_comment" value="1" <?php echo ($xms_conf['disable_wp_auto_p']['comment']?'checked="checked"':''); ?>/></td>
+                                   	<td width="200px"><?php echo __('On post/page comments', 'xms'); ?></td>                                	
+                                </tr>
+                            </table>
+                       	</td>
                     </tr>
+                
                     <tr>
-                        <td><input type="checkbox" id="chk_xms_disable_wp_auto_p_comment" name="chk_xms_disable_wp_auto_p_comment" value="1" <?php echo ($xms_conf['disable_wp_auto_p_comment']?'checked="checked"':''); ?>/></td>
-                        <td><?php echo __('Disable auto p on comments? <i>(This will stop WordPress to add paragraph automatically to your comments)</i>', 'xms'); ?></td>
+                        <td colspan="2">
+							<?php echo __('Disable content texturize? <i>(This will stop WordPress to automatically clean up your HTML codes)</i>', 'xms'); ?>
+                            <table cellpadding="0" cellspacing="0" style="margin-bottom:5px">
+                            	<tr>
+                        			<td width="22px"><input type="checkbox" id="chk_xms_disable_wp_texturize_post" name="chk_xms_disable_wp_texturize_post" value="1" <?php echo ($xms_conf['disable_wp_texturize']['post']?'checked="checked"':''); ?>/></td>
+                                    <td width="200px"><?php echo __('On post/page content', 'xms'); ?></td>
+                                    <td width="10px"></td>
+                        			<td width="22px"><input type="checkbox" id="chk_xms_disable_wp_texturize_comment" name="chk_xms_disable_wp_texturize_comment" value="1" <?php echo ($xms_conf['disable_wp_texturize']['comment']?'checked="checked"':''); ?>/></td>
+                                   	<td width="200px"><?php echo __('On post/page comments', 'xms'); ?></td>                                	
+                                </tr>
+                            </table>
+                       	</td>
                     </tr>
+                
                     <tr>
-                        <td><input type="checkbox" id="chk_xms_disable_wp_texturize" name="chk_xms_disable_wp_texturize" value="1" <?php echo ($xms_conf['disable_wp_texturize']?'checked="checked"':''); ?>/></td>
-                        <td><?php echo __('Disable content texturize? <i>(This will stop WordPress to automatically clean up your post/page contents HTML code)</i>', 'xms'); ?></td>
+                        <td colspan="2">
+							<?php echo __('Disable characters conversion? <i>(This will stop WordPress to automatically convert special characters to its HTML mode)</i>', 'xms'); ?>
+                            <table cellpadding="0" cellspacing="0" style="margin-bottom:5px">
+                            	<tr>
+                        			<td width="22px"><input type="checkbox" id="chk_xms_disable_convert_chars_post" name="chk_xms_disable_convert_chars_post" value="1" <?php echo ($xms_conf['disable_convert_chars']['post']?'checked="checked"':''); ?>/></td>
+                                    <td width="200px"><?php echo __('On post/page content', 'xms'); ?></td>
+                                    <td width="10px"></td>
+                        			<td width="22px"><input type="checkbox" id="chk_xms_disable_convert_chars_comment" name="chk_xms_disable_convert_chars_comment" value="1" <?php echo ($xms_conf['disable_convert_chars']['comment']?'checked="checked"':''); ?>/></td>
+                                   	<td width="200px"><?php echo __('On post/page comments', 'xms'); ?></td>                                	
+                                </tr>
+                            </table>
+                       	</td>
                     </tr>
+                    
                     <tr>
-                        <td><input type="checkbox" id="chk_xms_disable_post_revision" name="chk_xms_disable_post_revision" value="1" <?php echo ($xms_conf['disable_post_revision']?'checked="checked"':''); ?>/></td>
-                        <td><?php echo __('Disable post/page revision logging? <i>(This will stop WordPress to store post/page revisions records that will mostly be junks to your database)</i>', 'xms'); ?></td>
+                        <td width="22px"><input type="checkbox" id="chk_xms_disable_post_revision" name="chk_xms_disable_post_revision" value="1" <?php echo ($xms_conf['disable_post_revision']?'checked="checked"':''); ?>/></td>
+                        <td width="775px"><?php echo __('Disable post/page revision logging? <i>(This will stop WordPress to store post/page revisions records that will mostly be junks to your database)</i>', 'xms'); ?></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" id="chk_xms_enable_shortcode_on_text_widget" name="chk_xms_enable_shortcode_on_text_widget" value="1" <?php echo ($xms_conf['enable_shortcode_on_text_widget']?'checked="checked"':''); ?>/></td>

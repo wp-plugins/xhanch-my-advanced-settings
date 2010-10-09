@@ -5,7 +5,7 @@
 		Description: Provide useful advanced settings that are not provided by WordPress by default
 		Author: Susanto BSc (Xhanch Studio)
 		Author URI: http://xhanch.com
-		Version: 1.0.0
+		Version: 1.0.1
 	*/
 	
 	define('xms', true);
@@ -17,9 +17,18 @@
 	load_plugin_textdomain('xms', WP_PLUGIN_URL.'/xhanch-my-advanced-settings/lang/', 'xhanch-my-advanced-settings/lang/');
 		
 	$xms_default = array(
-		'disable_wp_auto_p_post' => 0,
-		'disable_wp_auto_p_comment' => 0,
-		'disable_wp_texturize' => 0,
+		'disable_wp_auto_p' => array(
+			'post' => 0,
+			'comment' => 0
+		),
+		'disable_wp_texturize' => array(
+			'post' => 0,
+			'comment' => 0
+		),
+		'disable_convert_chars' => array(
+			'post' => 0,
+			'comment' => 0
+		),
 		'disable_post_revision' => 1,
 		'enable_shortcode_on_text_widget' => 1,
 		'show_credit' => 1,
@@ -39,12 +48,21 @@
 	
 	define('xms_base_url', xms_get_dir('url'));
 	
-	if($xms_conf['disable_wp_auto_p_post'])
+	if($xms_conf['disable_wp_auto_p']['post'])
 		remove_filter ('the_content',  'wpautop');
-	if($xms_conf['disable_wp_auto_p_comment'])
+	if($xms_conf['disable_wp_auto_p']['comment'])
 		remove_filter ('comment_text',  'wpautop');
-	if($xms_conf['disable_wp_texturize'])
+		
+	if($xms_conf['disable_wp_texturize']['post'])
 		remove_filter ('the_content',  'wptexturize');
+	if($xms_conf['disable_wp_texturize']['comment'])
+		remove_filter ('comment_text',  'wptexturize');
+		
+	if($xms_conf['disable_convert_chars']['post'])
+		remove_filter ('the_content',  'convert_chars');
+	if($xms_conf['disable_convert_chars']['comment'])
+		remove_filter ('comment_text',  'convert_chars');
+	
 	if($xms_conf['disable_post_revision'])
 		define ('WP_POST_REVISIONS', 0);
 	if($xms_conf['enable_shortcode_on_text_widget'])
