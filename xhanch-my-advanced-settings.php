@@ -5,7 +5,7 @@
 		Description: Provide useful advanced settings that are not provided by WordPress by default
 		Author: Susanto BSc (Xhanch Studio)
 		Author URI: http://xhanch.com
-		Version: 1.0.1
+		Version: 1.0.2
 	*/
 	
 	define('xms', true);
@@ -76,29 +76,27 @@
 	}
 			
 	if(is_admin()){
-		function xms_admin_menu() {	
+		function xms_admin_menu() {	//var_dump(xhanch_root);
 			if(!defined('xhanch_root')){
 				add_menu_page(
 					'Xhanch', 
 					'Xhanch', 
 					8, 
-					'xhanch', 
-					'xhanch_intro',
+					'xhanch-my-advanced-settings/admin/xhanch.php', 
+					'',
 					'http://xhanch.com/icon-16x16.jpg'
 				);
-				define('xhanch_root', true);
-			}
+				define('xhanch_root', 'xhanch-my-advanced-settings/admin/xhanch.php');
+			}//var_dump(xhanch_root);
 			add_submenu_page(
-				'xhanch', 
+				xhanch_root, 
 				__('My Advanced Settings', 'xms'), 
 				__('My Adv. Settings', 'xms'), 
 				8, 
-				'xhanch-my-advanced-settings', 
-				'xms_setting'
+				'xhanch-my-advanced-settings/admin/setting.php', 
+				''
 			);
 		}
-		require_once(xms_base_dir.'/admin/xhanch.php');
-		require_once(xms_base_dir.'/admin/setting.php');
 		add_action('admin_menu', 'xms_admin_menu');
 	}
 	

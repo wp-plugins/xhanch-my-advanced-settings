@@ -19,4 +19,6 @@
 <?php
 		}
 	}
+	
+	xhanch_intro();
 ?>

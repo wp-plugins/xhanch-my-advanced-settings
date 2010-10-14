@@ -4,9 +4,9 @@ Plugin URI: http://xhanch.com/wordpress-plugin-my-advanced-settings/
 Author URI: http://xhanch.com
 Donate link: http://xhanch.com/xhanch-donate
 Tags: xhanch, widget, option, wordpress, admin, page, shortcode, post, plugin, comments, posts, image, links
-Requires at least: 2.8.6
+Requires at least: 2.3
 Tested up to: 3.0.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Provide useful advanced settings that are not provided by WordPress by default
 
 == Description ==

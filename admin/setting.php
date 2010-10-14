@@ -160,4 +160,6 @@
 		</div>
 <?php
 	}
+	
+	xms_setting();
 ?>
