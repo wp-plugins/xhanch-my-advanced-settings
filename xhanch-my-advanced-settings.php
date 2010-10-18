@@ -5,7 +5,7 @@
 		Description: Provide useful advanced settings that are not provided by WordPress by default
 		Author: Susanto BSc (Xhanch Studio)
 		Author URI: http://xhanch.com
-		Version: 1.0.2
+		Version: 1.0.3
 	*/
 	
 	define('xms', true);
@@ -31,6 +31,7 @@
 		),
 		'disable_post_revision' => 1,
 		'enable_shortcode_on_text_widget' => 1,
+		'show_sql_query_num' => 0,
 		'show_credit' => 1,
 	);
 		
@@ -67,12 +68,21 @@
 		define ('WP_POST_REVISIONS', 0);
 	if($xms_conf['enable_shortcode_on_text_widget'])
 		add_filter('widget_text', 'do_shortcode');
+	if($xms_conf['show_sql_query_num'])
+		add_action('wp_footer', 'xmp_sql_query_num');	
+		
 	if($xms_conf['show_credit'])
 		add_action('wp_footer', 'xmp_credit');	
 
 	function xmp_credit() {
 		$content = '<div style="font-size:10px;text-align:center">Empowered by <a href="http://xhanch.com/wordpress-plugin-my-advanced-settings/" rel="section" title="'.__('Xhanch - My Advanced Settings - Provide useful advanced options that are not provided by WordPress by default', 'xms').'">'.__('My Advanced Settings', 'xms').'</a>, <a href="http://xhanch.com/" rel="section" title="'.__('Developed by Xhanch Studio', 'xms').'">'.__('by Xhanch Studio', 'xms').'</a></div>';
 		echo $content;
+	}
+	
+	function xmp_sql_query_num(){
+		global $wpdb;
+		$content = '<div style="font-size:10px;text-align:center">'.$wpdb->num_queries.' '.__('SQL queries have been executed to show this page', 'xms').'</div>';
+        echo $content;
 	}
 			
 	if(is_admin()){

@@ -23,6 +23,7 @@
 				),
 				'disable_post_revision' => xms_form_post('chk_xms_disable_post_revision'),		
 				'enable_shortcode_on_text_widget' => xms_form_post('chk_xms_enable_shortcode_on_text_widget'),	
+				'show_sql_query_num' => xms_form_post('chk_xms_show_sql_query_num'),
 				'show_credit' => xms_form_post('chk_xms_show_credit'),	
 			);
 						
@@ -124,6 +125,10 @@
                         <td><?php echo __('Enable shortcode on text widgets?', 'xms'); ?></td>
                     </tr>
                     <tr>
+                        <td><input type="checkbox" id="chk_xms_show_sql_query_num" name="chk_xms_show_sql_query_num" value="1" <?php echo ($xms_conf['show_sql_query_num']?'checked="checked"':''); ?>/></td>
+                        <td><?php echo __('Display total number of executed SQL queries?', 'xms'); ?></td>
+                    </tr>
+                    <tr>
                         <td><input type="checkbox" id="chk_xms_show_credit" name="chk_xms_show_credit" value="1" <?php echo ($xms_conf['show_credit']?'checked="checked"':''); ?>/></td>
                         <td><?php echo __('Show Credit?', 'xms'); ?></td>
                     </tr>
@@ -136,8 +141,8 @@
 				
 			<br/><br/>
 			<a name="guide"></a>
-			<b><big><?php echo __('Support This Plugin Development', 'xms'); ?></big></b><br/>		
-			<br/>	
+			<b><big><?php echo __('Support This Plugin Development', 'xms'); ?></big></b><br/>
+			<br/>
 			<?php echo __('Do you like this plugin? Do you think this plugin very helpful?', 'xms'); ?><br/>
 			<?php echo __('Why don\'t you support this plugin developement by donating any amount you are willing to give?', 'xms'); ?><br/>
 			<br/>
