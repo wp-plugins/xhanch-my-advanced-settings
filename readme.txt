@@ -18,6 +18,7 @@ Xhanch - My Advanced Settings (developed by [Xhanch Studio](http://xhanch.com/ "
 - Disable WordPress convert characters functionality on post/page and comments that convert special characters into another format
 - Enable shortcodes usage on text widgets
 - Disable post/page revision history/logs to save your database storage
+- Display total number of executed SQL queries
 - and more to come ...
 
 This plugin should be an essential plugin for your WordPress websites.
