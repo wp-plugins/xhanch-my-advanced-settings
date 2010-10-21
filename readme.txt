@@ -6,7 +6,7 @@ Donate link: http://xhanch.com/xhanch-donate
 Tags: xhanch, widget, option, wordpress, admin, page, shortcode, post, plugin, comments, posts, image, links
 Requires at least: 2.3
 Tested up to: 3.0.1
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 Provide useful advanced settings that are not provided by WordPress by default
 
 == Description ==
@@ -18,6 +18,7 @@ Xhanch - My Advanced Settings (developed by [Xhanch Studio](http://xhanch.com/ "
 - Disable WordPress convert characters functionality on post/page and comments that convert special characters into another format
 - Enable shortcodes usage on text widgets
 - Disable post/page revision history/logs to save your database storage
+- Add a favicon for your website
 - Display total number of executed SQL queries
 - and more to come ...
 

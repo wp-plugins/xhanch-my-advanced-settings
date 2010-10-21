@@ -22,8 +22,9 @@
 					'comment' => xms_form_post('chk_xms_disable_convert_chars_comment'),
 				),
 				'disable_post_revision' => xms_form_post('chk_xms_disable_post_revision'),		
-				'enable_shortcode_on_text_widget' => xms_form_post('chk_xms_enable_shortcode_on_text_widget'),	
-				'show_sql_query_num' => xms_form_post('chk_xms_show_sql_query_num'),
+				'enable_shortcode_on_text_widget' => xms_form_post('chk_xms_enable_shortcode_on_text_widget'),
+				'show_sql_query_num' => xms_form_post('chk_xms_show_sql_query_num'),	
+				'favicon_url' => xms_form_post('txt_xms_favicon_url'),
 				'show_credit' => xms_form_post('chk_xms_show_credit'),	
 			);
 						
@@ -128,11 +129,21 @@
                         <td><input type="checkbox" id="chk_xms_show_sql_query_num" name="chk_xms_show_sql_query_num" value="1" <?php echo ($xms_conf['show_sql_query_num']?'checked="checked"':''); ?>/></td>
                         <td><?php echo __('Display total number of executed SQL queries?', 'xms'); ?></td>
                     </tr>
+                </table><br/>          
+                
+                <table cellpadding="0" cellspacing="0">                
                     <tr>
-                        <td><input type="checkbox" id="chk_xms_show_credit" name="chk_xms_show_credit" value="1" <?php echo ($xms_conf['show_credit']?'checked="checked"':''); ?>/></td>
-                        <td><?php echo __('Show Credit?', 'xms'); ?></td>
+                        <td width="150px"><?php echo __('Favicon URL', 'xms'); ?></td>
+                        <td width="300px"><input type="text" id="txt_xms_favicon_url" name="txt_xms_favicon_url" value="<?php echo $xms_conf['favicon_url']; ?>" style="width:300px"/></td>
                     </tr>
-                </table><br/>                 
+                </table><br/>    
+                
+                <table cellpadding="0" cellspacing="0">                
+                    <tr>
+                        <td width="22px"><input type="checkbox" id="chk_xms_show_credit" name="chk_xms_show_credit" value="1" <?php echo ($xms_conf['show_credit']?'checked="checked"':''); ?>/></td>
+                        <td width="775px"><?php echo __('Show Credit?', 'xms'); ?></td>
+                    </tr>
+                </table>
                 
                 <p class="submit">
                     <input type="submit" name="cmd_xms_update" value="<?php echo __('Update Configuration', 'xms'); ?>"/>

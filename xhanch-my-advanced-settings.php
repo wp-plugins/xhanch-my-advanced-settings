@@ -32,6 +32,7 @@
 		'disable_post_revision' => 1,
 		'enable_shortcode_on_text_widget' => 1,
 		'show_sql_query_num' => 0,
+		'favicon_url' => '',
 		'show_credit' => 1,
 	);
 		
@@ -70,9 +71,18 @@
 		add_filter('widget_text', 'do_shortcode');
 	if($xms_conf['show_sql_query_num'])
 		add_action('wp_footer', 'xmp_sql_query_num');	
+	if($xms_conf['favicon_url'])
+		add_action('wp_head', 'xmp_favicon');	
 		
 	if($xms_conf['show_credit'])
 		add_action('wp_footer', 'xmp_credit');	
+
+	function xmp_favicon() {
+		global $xms_conf;
+		if($xms_conf['favicon_url'])
+			$content = '<link rel="shortcut icon" href="'.$xms_conf['favicon_url'].'" />';
+		echo $content;
+	}
 
 	function xmp_credit() {
 		$content = '<div style="font-size:10px;text-align:center">Empowered by <a href="http://xhanch.com/wordpress-plugin-my-advanced-settings/" rel="section" title="'.__('Xhanch - My Advanced Settings - Provide useful advanced options that are not provided by WordPress by default', 'xms').'">'.__('My Advanced Settings', 'xms').'</a>, <a href="http://xhanch.com/" rel="section" title="'.__('Developed by Xhanch Studio', 'xms').'">'.__('by Xhanch Studio', 'xms').'</a></div>';
