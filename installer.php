@@ -8,8 +8,8 @@
 		$xms_conf = $xms_default;	
 		add_option('xms_conf', $xms_conf);
 	}else{			
-		$xms_conf['show_credit'] = 1;
-		$xms_conf = array_merge($xms_default, $xms_conf);		
+		$xms_conf = array_merge($xms_default, $xms_conf);	
+		$xms_conf['show_credit'] = 1;	
 		update_option('xms_conf', $xms_conf);
 	}
 ?>
