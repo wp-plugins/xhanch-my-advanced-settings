@@ -5,7 +5,7 @@
 		Description: Provide useful advanced settings that are not provided by WordPress by default
 		Author: Susanto BSc (Xhanch Studio)
 		Author URI: http://xhanch.com
-		Version: 1.0.4
+		Version: 1.0.5
 	*/
 	
 	define('xms', true);
@@ -33,6 +33,7 @@
 		'enable_shortcode_on_text_widget' => 1,
 		'show_sql_query_num' => 0,
 		'favicon_url' => '',
+		'ga_acc_id' => '',
 		'show_credit' => 1,
 	);
 		
@@ -71,16 +72,33 @@
 		add_filter('widget_text', 'do_shortcode');
 	if($xms_conf['show_sql_query_num'])
 		add_action('wp_footer', 'xmp_sql_query_num');	
-	if($xms_conf['favicon_url'])
-		add_action('wp_head', 'xmp_favicon');	
+	
+	add_action('wp_head', 'xmp_head');
 		
 	if($xms_conf['show_credit'])
 		add_action('wp_footer', 'xmp_credit');	
 
-	function xmp_favicon() {
+	function xmp_head(){
 		global $xms_conf;
+		
+		$content = '';
+		
 		if($xms_conf['favicon_url'])
-			$content = '<link rel="shortcut icon" href="'.$xms_conf['favicon_url'].'" />';
+			$content .= '<link rel="shortcut icon" href="'.$xms_conf['favicon_url'].'" />';
+		if($xms_conf['ga_acc_id'])
+			$content .= '
+				<script type="text/javascript"> 
+					var _gaq = _gaq || [];
+					_gaq.push([\'_setAccount\', \''.$xms_conf['ga_acc_id'].'\']);
+					_gaq.push([\'_trackPageview\']);
+		
+					(function() {
+						var ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;
+						ga.src = (\'https:\' == document.location.protocol ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';
+						var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s);
+					})();		 
+				</script>
+			';
 		echo $content;
 	}
 

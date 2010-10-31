@@ -25,6 +25,7 @@
 				'enable_shortcode_on_text_widget' => xms_form_post('chk_xms_enable_shortcode_on_text_widget'),
 				'show_sql_query_num' => xms_form_post('chk_xms_show_sql_query_num'),	
 				'favicon_url' => xms_form_post('txt_xms_favicon_url'),
+				'ga_acc_id' => xms_form_post('txt_xms_ga_acc_id'),
 				'show_credit' => xms_form_post('chk_xms_show_credit'),	
 			);
 						
@@ -133,8 +134,20 @@
                 
                 <table cellpadding="0" cellspacing="0">                
                     <tr>
-                        <td width="150px"><?php echo __('Favicon URL', 'xms'); ?></td>
-                        <td width="300px"><input type="text" id="txt_xms_favicon_url" name="txt_xms_favicon_url" value="<?php echo $xms_conf['favicon_url']; ?>" style="width:300px"/></td>
+                        <td width="250px"><?php echo __('Favicon URL', 'xms'); ?></td>
+                        <td width="400px"><input type="text" id="txt_xms_favicon_url" name="txt_xms_favicon_url" value="<?php echo $xms_conf['favicon_url']; ?>" style="width:300px"/></td>
+                    </tr>             
+                    <tr>
+                        <td><?php echo __('Google Analytics Account ID', 'xms'); ?> (<a href="javascript:show_more('sct_ga_acc_id')">?</a>)</td>
+                        <td><input type="text" id="txt_xms_ga_acc_id" name="txt_xms_ga_acc_id" value="<?php echo $xms_conf['ga_acc_id']; ?>" style="width:300px"/></td>
+                    </tr>          
+                    <tr id="sct_ga_acc_id" style="display:none;">
+                        <td colspan="2">
+                        	<small>
+	                        	How to know you google analytics account ID?<br/>
+    	                        You can find it on your analytics javascript code. In the JavaScript you can see your account ID in a format like UA-??????-?
+                            </small>                        
+                        </td>
                     </tr>
                 </table><br/>    
                 
