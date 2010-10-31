@@ -3,7 +3,7 @@ Contributors: xhanch_studio
 Plugin URI: http://xhanch.com/wordpress-plugin-my-advanced-settings/
 Author URI: http://xhanch.com
 Donate link: http://xhanch.com/xhanch-donate
-Tags: xhanch, widget, option, wordpress, admin, page, shortcode, post, plugin, comments, posts, image, links, favicon, setting, option, image
+Tags: xhanch, widget, option, wordpress, admin, page, shortcode, post, plugin, comments, posts, image, links, favicon, setting, option, images, post, google, sidebar, comment, links
 Requires at least: 2.3
 Tested up to: 3.0.1
 Stable tag: 1.0.5
