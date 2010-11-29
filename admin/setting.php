@@ -22,7 +22,8 @@
 					'comment' => xms_form_post('chk_xms_disable_convert_chars_comment'),
 				),
 				'disable_post_revision' => xms_form_post('chk_xms_disable_post_revision'),		
-				'disable_tinymce' => xms_form_post('chk_xms_disable_tinymce'),	
+				'disable_tinymce' => xms_form_post('chk_xms_disable_tinymce'),		
+				'disable_canonical_url' => xms_form_post('chk_xms_disable_canonical_url'),	
 				'enable_shortcode_on_text_widget' => xms_form_post('chk_xms_enable_shortcode_on_text_widget'),
 				'show_sql_query_num' => xms_form_post('chk_xms_show_sql_query_num'),	
 				'favicon_url' => xms_form_post('txt_xms_favicon_url'),
@@ -338,6 +339,10 @@ http://zing.zingfast.com'
                     <tr>
                         <td width="22px"><input type="checkbox" id="chk_xms_disable_tinymce" name="chk_xms_disable_tinymce" value="1" <?php echo ($xms_conf['disable_tinymce']?'checked="checked"':''); ?>/></td>
                         <td width="775px"><?php echo __('Disable the TinyMCE/visual rich text editor?', 'xms'); ?></td>
+                    </tr>
+                    <tr>
+                        <td width="22px"><input type="checkbox" id="chk_xms_disable_canonical_url" name="chk_xms_disable_canonical_url" value="1" <?php echo ($xms_conf['disable_canonical_url']?'checked="checked"':''); ?>/></td>
+                        <td width="775px"><?php echo __('Disable/hide canonical URL?', 'xms'); ?></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" id="chk_xms_enable_shortcode_on_text_widget" name="chk_xms_enable_shortcode_on_text_widget" value="1" <?php echo ($xms_conf['enable_shortcode_on_text_widget']?'checked="checked"':''); ?>/></td>
