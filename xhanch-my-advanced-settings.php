@@ -5,7 +5,7 @@
 		Description: Provide useful advanced settings that are not provided by WordPress by default
 		Author: Susanto BSc (Xhanch Studio)
 		Author URI: http://xhanch.com
-		Version: 1.0.8
+		Version: 1.0.9
 	*/
 	
 	define('xms', true);
@@ -132,7 +132,7 @@
 					8, 
 					'xhanch-my-advanced-settings/admin/xhanch.php', 
 					'',
-					xmt_get_dir('url').'/img/icon.jpg'
+					xms_get_dir('url').'/img/icon.jpg'
 				);
 				define('xhanch_root', 'xhanch-my-advanced-settings/admin/xhanch.php');
 			}//var_dump(xhanch_root);
