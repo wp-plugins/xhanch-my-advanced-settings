@@ -132,7 +132,7 @@
 					8, 
 					'xhanch-my-advanced-settings/admin/xhanch.php', 
 					'',
-					'http://xhanch.com/icon-16x16.jpg'
+					xmt_get_dir('url').'/img/icon.jpg'
 				);
 				define('xhanch_root', 'xhanch-my-advanced-settings/admin/xhanch.php');
 			}//var_dump(xhanch_root);
