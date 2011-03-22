@@ -13,22 +13,23 @@ Provide useful advanced settings that are not provided by WordPress by default
 
 Xhanch - My Advanced Settings (developed by [Xhanch Studio](http://xhanch.com/ "Xhanch Studio")) is a plugin that provides commonly used options for your WordPress but not provided by WordPress by default. With this, you can utilize/enable/disable these available options/features:
 
-- Disable Wordpress auto P tag on post/page and comments that will automatically add annoying P tags
-- Disable WordPress texturize on post/page and comments that will change/clean up/mess up your content's HTML code
-- Disable WordPress convert characters functionality on post/page and comments that convert special characters into another format
-- Enable shortcodes usage on text widgets
-- Disable post/page revision history/logs to save your database storage
-- Disable canonical URL
-- Add a favicon for your website
-- Insert google analytics code
-- Display total number of executed SQL queries
-- Easily insert 200+ Update Services (ping list) to notify updates on your website
-- Show SQL query error
-- and more to come ...
+* Disable Wordpress auto P tag on post/page and comments that will automatically add annoying P tags
+* Disable WordPress texturize on post/page and comments that will change/clean up/mess up your content's HTML code
+* Disable WordPress convert characters functionality on post/page and comments that convert special characters into another format
+* Enable shortcodes usage on text widgets
+* Disable post/page revision history/logs to save your database storage
+* Disable canonical URL
+* Add a favicon for your website
+* Insert google analytics code
+* Display total number of executed SQL queries
+* Easily insert 200+ Update Services (ping list) to notify updates on your website
+* Show SQL query error
+* and more to come ...
 
 This plugin should be an essential plugin for your WordPress websites.
 
 For complete features list, installation and setup, screen shots, FAQs, update logs/changelog, and support:
+
 * [Plugin details](http://xhanch.com/wordpress-plugin-my-advanced-settings/ "Xhanch - My Advanced Settings")
 * [Forum/community center](http://forum.xhanch.com "Forum/community center")
 * [Change/update logs](http://forum.xhanch.com/index.php/board,20.0.html "Change/update logs")
