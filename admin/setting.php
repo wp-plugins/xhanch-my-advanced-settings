@@ -29,6 +29,7 @@
 				'favicon_url' => xms_form_post('txt_xms_favicon_url'),
 				'ga_acc_id' => xms_form_post('txt_xms_ga_acc_id'),
 				'show_credit' => xms_form_post('chk_xms_show_credit'),	
+				'show_sql_error' => xms_form_post('chk_xms_show_sql_error'),	
 			);
 						
 			update_option('xms_conf', $xms_conf);	
@@ -351,6 +352,10 @@ http://zing.zingfast.com'
                     <tr>
                         <td><input type="checkbox" id="chk_xms_show_sql_query_num" name="chk_xms_show_sql_query_num" value="1" <?php echo ($xms_conf['show_sql_query_num']?'checked="checked"':''); ?>/></td>
                         <td><?php echo __('Display total number of executed SQL queries?', 'xms'); ?></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="chk_xms_show_sql_error" name="chk_xms_show_sql_error" value="1" <?php echo ($xms_conf['show_sql_error']?'checked="checked"':''); ?>/></td>
+                        <td><?php echo __('Show SQL errors (FYI, Wordpress hide all SQL query error by default)?', 'xms'); ?></td>
                     </tr>
                 </table><br/>          
                 

@@ -5,7 +5,7 @@
 		Description: Provide useful advanced settings that are not provided by WordPress by default
 		Author: Susanto BSc (Xhanch Studio)
 		Author URI: http://xhanch.com
-		Version: 1.0.9
+		Version: 1.1.0
 	*/
 	
 	define('xms', true);
@@ -37,6 +37,7 @@
 		'favicon_url' => '',
 		'ga_acc_id' => '',
 		'show_credit' => 1,
+		'show_sql_error' => 0,
 	);
 		
 	$xms_conf = get_option('xms_conf');
@@ -52,6 +53,11 @@
 	xms_inc('inc');
 	
 	define('xms_base_url', xms_get_dir('url'));
+
+	if($xms_conf['show_sql_error']){
+		global $wpdb;
+		$wpdb->show_errors();
+	}
 	
 	if($xms_conf['disable_wp_auto_p']['post'])
 		remove_filter ('the_content',  'wpautop');
