@@ -6,7 +6,7 @@ Donate link: http://xhanch.com/xhanch-donate
 Tags: xhanch, widget, option, wordpress, admin, page, shortcode, post, plugin, comments, posts, image, links, favicon, setting, option, images, post, google, sidebar, comment, links
 Requires at least: 2.3
 Tested up to: 3.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 Provide useful advanced settings that are not provided by WordPress by default
 
 == Description ==
@@ -19,6 +19,7 @@ Xhanch - My Advanced Settings (developed by [Xhanch Studio](http://xhanch.com/ "
 * Enable shortcodes usage on text widgets
 * Disable post/page revision history/logs to save your database storage
 * Disable canonical URL
+* Hide top WP admin bar
 * Add a favicon for your website
 * Insert google analytics code
 * Display total number of executed SQL queries

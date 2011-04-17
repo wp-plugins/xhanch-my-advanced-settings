@@ -25,6 +25,7 @@
 				'disable_tinymce' => xms_form_post('chk_xms_disable_tinymce'),		
 				'disable_canonical_url' => xms_form_post('chk_xms_disable_canonical_url'),	
 				'enable_shortcode_on_text_widget' => xms_form_post('chk_xms_enable_shortcode_on_text_widget'),
+				'hide_top_admin_bar' => xms_form_post('chk_xms_hide_top_admin_bar'),	
 				'show_sql_query_num' => xms_form_post('chk_xms_show_sql_query_num'),	
 				'favicon_url' => xms_form_post('txt_xms_favicon_url'),
 				'ga_acc_id' => xms_form_post('txt_xms_ga_acc_id'),
@@ -348,6 +349,10 @@ http://zing.zingfast.com'
                     <tr>
                         <td><input type="checkbox" id="chk_xms_enable_shortcode_on_text_widget" name="chk_xms_enable_shortcode_on_text_widget" value="1" <?php echo ($xms_conf['enable_shortcode_on_text_widget']?'checked="checked"':''); ?>/></td>
                         <td><?php echo __('Enable shortcode on text widgets?', 'xms'); ?></td>
+                    </tr>
+                    <tr>
+                        <td width="22px"><input type="checkbox" id="chk_xms_hide_top_admin_bar" name="chk_xms_hide_top_admin_bar" value="1" <?php echo ($xms_conf['hide_top_admin_bar']?'checked="checked"':''); ?>/></td>
+                        <td width="775px"><?php echo __('Hide WP Admin bar on top?', 'xms'); ?></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" id="chk_xms_show_sql_query_num" name="chk_xms_show_sql_query_num" value="1" <?php echo ($xms_conf['show_sql_query_num']?'checked="checked"':''); ?>/></td>
