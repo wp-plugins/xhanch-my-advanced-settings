@@ -274,13 +274,19 @@ http://zing.zingfast.com'
     	</script>
 		<div class="wrap">
 			<h2><?php echo __('Xhanch - My Advanced Settings - Configuration', 'xms'); ?></h2>		
-            <div style="float:right;line-height:21px">
-            	<b><?php echo __('Do you like this plugin? If yes, click this button -&gt;', 'xms'); ?></b> <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fxhanch.com%2Fwordpress-plugin-my-advanced-settings/%2F&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:1px solid #999; overflow:hidden; width:100px; height:21px; margin:0 0 0 10px; float:right" allowTransparency="true"></iframe>           
-            </div>
-            <div class="clear"></div>	
-            <div style="float:right;line-height:21px">
-            	<b><?php echo __('Do you like our service and support? If yes, click this button -&gt;', 'xms'); ?></b> <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FXhanch-Studio%2F146245898739871&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:1px solid #999; overflow:hidden; width:100px; height:21px; margin:0 0 0 10px; float:right" allowTransparency="true"></iframe>           
-            </div>
+
+			<iframe src="http://xhanch.com/ads" style="width:468px;height:60px;
+			float:left;border:1px solid #cacaca" allowscrolling="no" allowTransparency="true"></iframe>	
+			
+            <div style="float:right;width:400px">
+				<div style="float:right;line-height:21px">
+					<b><?php echo __('Do you like this Xhanch - My Adv. Settings? ', 'xms'); ?></b> <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fxhanch.com%2Fwordpress-plugin-my-advanced-settings/%2F&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:1px solid #999; overflow:hidden; width:100px; height:21px; margin:0 0 0 10px; float:right" allowTransparency="true"></iframe>           
+				</div>
+				<div class="clear"></div>	
+				<div style="float:right;line-height:21px">
+					<b><?php echo __('Do you like our service and support? ', 'xms'); ?></b> <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FXhanch-Studio%2F146245898739871&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:1px solid #999; overflow:hidden; width:100px; height:21px; margin:0 0 0 10px; float:right" allowTransparency="true"></iframe>           
+				</div>
+			</div>
             <div class="clear"></div>
 			<br/>
                 
@@ -389,13 +395,10 @@ http://zing.zingfast.com'
                         <td width="722px"><?php echo __('Insert 200+ update services (ping list)', 'xms'); ?> (<a href="options-writing.php">See your update services here</a>)</td>
                     </tr>
                 </table><br/> 
-                
-                <table cellpadding="0" cellspacing="0">                
-                    <tr>
-                        <td width="22px"><input type="checkbox" id="chk_xms_show_credit" name="chk_xms_show_credit" value="1" <?php echo ($xms_conf['show_credit']?'checked="checked"':''); ?>/></td>
-                        <td width="775px"><?php echo __('Show Credit?', 'xms'); ?></td>
-                    </tr>
-                </table>
+
+				<input type="checkbox" id="chk_xms_show_credit" name="chk_xms_show_credit" value="1" <?php echo ($xms_conf['show_credit']?'checked="checked"':''); ?>/>
+				<b><?php echo __('Show credit link ("Powered by"), I will <a href="http://xhanch.com/xhanch-donate" target="_blank">donate</a> later.', 'xmt'); ?></b>
+				<br/>
                 
                 <p class="submit">
                     <input type="submit" name="cmd_xms_update" value="<?php echo __('Update Configuration', 'xms'); ?>"/>

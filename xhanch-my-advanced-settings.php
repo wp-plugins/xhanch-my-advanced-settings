@@ -37,7 +37,7 @@
 		'show_sql_query_num' => 0,
 		'favicon_url' => '',
 		'ga_acc_id' => '',
-		'show_credit' => 1,
+		'show_credit' => 0,
 		'show_sql_error' => 0,
 	);
 		
