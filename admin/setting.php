@@ -275,7 +275,7 @@ http://zing.zingfast.com'
 		<div class="wrap">
 			<h2><?php echo __('Xhanch - My Advanced Settings - Configuration', 'xms'); ?></h2>		
 
-			<iframe src="http://xhanch.com/ads" style="width:468px;height:60px;
+			<iframe src="http://ads.xhanch.com/" style="width:468px;height:60px;
 			float:left;border:1px solid #cacaca" allowscrolling="no" allowTransparency="true"></iframe>	
 			
             <div style="float:right;width:400px">
