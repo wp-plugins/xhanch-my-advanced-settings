@@ -5,7 +5,7 @@ Author URI: http://xhanch.com
 Donate link: http://xhanch.com/xhanch-donate
 Tags: xhanch, widget, option, wordpress, admin, page, shortcode, post, plugin, comments, posts, image, links, favicon, setting, option, images, post, google, sidebar, comment, links
 Requires at least: 2.3
-Tested up to: 3.1
+Tested up to: 3.5
 Stable tag: 1.1.1
 Provide useful advanced settings that are not provided by WordPress by default
 
