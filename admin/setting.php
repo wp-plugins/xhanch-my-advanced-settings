@@ -277,15 +277,15 @@ http://zing.zingfast.com'
 			<h2><?php echo __('Xhanch - My Advanced Settings - Configuration', 'xms'); ?></h2>		
 
 			<iframe src="http://ads.xhanch.com/" style="width:468px;height:60px;
-			float:left;border:1px solid #cacaca" allowscrolling="no" allowTransparency="true"></iframe>	
+			float:left;border:1px solid #cacaca" allowscrolling="no" allowTransparency="true" scrolling="no"></iframe>	
 			
             <div style="float:right;width:400px">
 				<div style="float:right;line-height:21px">
-					<b><?php echo __('Do you like this Xhanch - My Adv. Settings? ', 'xms'); ?></b> <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fxhanch.com%2Fwordpress-plugin-my-advanced-settings/%2F&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:1px solid #999; overflow:hidden; width:100px; height:21px; margin:0 0 0 10px; float:right" allowTransparency="true"></iframe>           
+					<b><?php echo __('Do you like this Xhanch - My Adv. Settings? ', 'xms'); ?></b> <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fxhanch.com%2Fwordpress-plugin-my-advanced-settings/%2F&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px; margin:0 0 0 10px; float:right" allowTransparency="true"></iframe>           
 				</div>
 				<div class="clear"></div>	
 				<div style="float:right;line-height:21px">
-					<b><?php echo __('Do you like our service and support? ', 'xms'); ?></b> <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FXhanch-Studio%2F146245898739871&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:1px solid #999; overflow:hidden; width:100px; height:21px; margin:0 0 0 10px; float:right" allowTransparency="true"></iframe>           
+					<b><?php echo __('Do you like our service and support? ', 'xms'); ?></b> <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FXhanch-Studio%2F146245898739871&amp;layout=button_count&amp;show_faces=false&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px; margin:0 0 0 10px; float:right" allowTransparency="true"></iframe>           
 				</div>
 			</div>
             <div class="clear"></div>
