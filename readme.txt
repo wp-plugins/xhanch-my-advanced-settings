@@ -19,6 +19,7 @@ Xhanch - My Advanced Settings (developed by [Xhanch Studio](http://xhanch.com/ "
 * Enable shortcodes usage on text widgets
 * Disable post/page revision history/logs to save your database storage
 * Disable canonical URL
+* Disable XML RPC
 * Hide top WP admin bar
 * Add a favicon for your website
 * Insert google analytics code
