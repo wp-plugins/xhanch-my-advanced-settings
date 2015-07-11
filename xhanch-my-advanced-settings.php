@@ -5,7 +5,7 @@
 		Description: Provide useful advanced settings that are not provided by WordPress by default
 		Author: Susanto BSc (Xhanch Studio)
 		Author URI: http://xhanch.com
-		Version: 1.1.1
+		Version: 1.1.2
 	*/
 	
 	define('xms', true);
@@ -32,6 +32,7 @@
 		'disable_post_revision' => 1,
 		'disable_tinymce' => 0,
 		'disable_canonical_url' => 0,
+		'disable_xml_rpc' => 1,
 		'enable_shortcode_on_text_widget' => 1,
 		'hide_top_admin_bar' => 0,
 		'show_sql_query_num' => 0,
@@ -88,6 +89,8 @@
 		wp_deregister_style('admin-bar');
 		remove_action('wp_footer','wp_admin_bar_render',1000);
 	}
+	if($xms_conf['disable_xml_rpc'])
+		add_filter('xmlrpc_enabled', '__return_false');
 	if($xms_conf['show_sql_query_num'])
 		add_action('wp_footer', 'xms_sql_query_num');	
 	

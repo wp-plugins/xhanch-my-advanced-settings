@@ -23,7 +23,8 @@
 				),
 				'disable_post_revision' => xms_form_post('chk_xms_disable_post_revision'),		
 				'disable_tinymce' => xms_form_post('chk_xms_disable_tinymce'),		
-				'disable_canonical_url' => xms_form_post('chk_xms_disable_canonical_url'),	
+				'disable_canonical_url' => xms_form_post('chk_xms_disable_canonical_url'),		
+				'disable_xml_rpc' => xms_form_post('chk_xms_disable_xml_rpc'),		
 				'enable_shortcode_on_text_widget' => xms_form_post('chk_xms_enable_shortcode_on_text_widget'),
 				'hide_top_admin_bar' => xms_form_post('chk_xms_hide_top_admin_bar'),	
 				'show_sql_query_num' => xms_form_post('chk_xms_show_sql_query_num'),	
@@ -351,6 +352,10 @@ http://zing.zingfast.com'
                     <tr>
                         <td width="22px"><input type="checkbox" id="chk_xms_disable_canonical_url" name="chk_xms_disable_canonical_url" value="1" <?php echo ($xms_conf['disable_canonical_url']?'checked="checked"':''); ?>/></td>
                         <td width="775px"><?php echo __('Disable/hide canonical URL?', 'xms'); ?></td>
+                    </tr>
+                    <tr>
+                        <td width="22px"><input type="checkbox" id="chk_xms_disable_xml_rpc" name="chk_xms_disable_xml_rpc" value="1" <?php echo ($xms_conf['disable_xml_rpc']?'checked="checked"':''); ?>/></td>
+                        <td width="775px"><?php echo __('Disable XML RPC?', 'xms'); ?></td>
                     </tr>
                     <tr>
                         <td><input type="checkbox" id="chk_xms_enable_shortcode_on_text_widget" name="chk_xms_enable_shortcode_on_text_widget" value="1" <?php echo ($xms_conf['enable_shortcode_on_text_widget']?'checked="checked"':''); ?>/></td>
